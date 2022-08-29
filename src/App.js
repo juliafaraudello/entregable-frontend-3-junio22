@@ -1,3 +1,7 @@
+import { userState } from 'react';
+import Header from './components/Cabecera'
+import List from './components/Listado'
+
 // El componente App es el padre de:
 // - Cabecera
 // - Listado
@@ -7,14 +11,19 @@
 
 function App() {
 
+  const [itemCount , setCounter] = userState(0)
+  const addItem = () => {
+    setCounter(itemCount+1)
+  }
+
   return (
     <div className="App">
-      <Cabecera />
-      <Listado />
+      <Header items={itemCount}/>
+      <List addItem={addItem}/>
     </div>
   );
 }
 
 export default App;
 
-//TEST
+
