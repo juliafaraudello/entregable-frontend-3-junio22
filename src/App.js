@@ -1,6 +1,6 @@
 import { userState } from 'react';
-import Header from './components/Cabecera'
-import List from './components/Listado'
+import Cabecera from './components/Cabecera'
+import Listado from './components/Listado'
 
 // El componente App es el padre de:
 // - Cabecera
@@ -18,8 +18,8 @@ function App() {
 
   return (
     <div className="App">
-      <Header items={itemCount}/>
-      <List addItem={addItem}/>
+      <Cabecera items={itemCount}/>
+      <Listado addItem={addItem}/>
     </div>
   );
 }
